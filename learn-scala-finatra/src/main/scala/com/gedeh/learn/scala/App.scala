@@ -8,6 +8,10 @@ import com.twitter.finatra.http.routing.HttpRouter
 object AppMain extends AppServer
 
 class AppServer extends HttpServer {
+
+  override protected def defaultHttpPort: String = ":8080"
+  override protected def disableAdminHttpServer: Boolean = true
+
   override protected def configureHttp(router: HttpRouter): Unit = {
     router
       .filter[CommonFilters]
