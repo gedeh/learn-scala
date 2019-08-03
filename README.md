@@ -19,6 +19,6 @@ scoop install oraclejdk-lts
 
 ## Run
 
-- Use `sbt run -http.port=:8080 -admin.port=:8090` to run the HTTP server
+- Use `sbt run -http.port=:8080 -admin.port=:8090` to run the HTTP server. (default ports are `8888` and `9990`)
 - Open URL `http://localhost:8080/hello` in browser
 - Open URL `http://localhost:8090/admin` in browser for Admin UI
