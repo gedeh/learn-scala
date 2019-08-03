@@ -9,14 +9,14 @@ import com.twitter.inject.Logging
 class HelloController extends Controller with Logging {
 
   get("/hello") { request: Request =>
-    info("/hello endpoint")
+    debug("/hello endpoint")
     "Hello!"
   }
 
   get("/name/:name") { request: Request =>
     val name = request.params("name")
     val message = String.format("Hey %s!", name)
-    info(String.format("/name endpoint, name: %s", name))
+    debug(String.format("/name endpoint, name: %s", name))
     response.ok(Map("message" -> message)).contentTypeJson()
   }
 }
