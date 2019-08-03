@@ -1,4 +1,4 @@
-name := "finatra-http-service"
+name := "learn-scala-finatra"
 version := "0.1"
 
 scalaVersion := "2.12.0"
