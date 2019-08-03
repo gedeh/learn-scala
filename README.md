@@ -21,4 +21,4 @@ Install `sbt` using `scoop install sbt`
 
 - Run `sbt run -http.port=:8080 -admin.port=:8090`
 - Open URL `http://localhost:8080/hello` in browser
-- Open URL `http://localhost:8090` in browser for Admin UI
+- Open URL `http://localhost:8090/admin` in browser for Admin UI
