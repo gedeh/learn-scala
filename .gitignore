@@ -1,7 +1,8 @@
 .idea
 .bloop
 .metals
-project/target
+**/project
 target
 *.class
 *.iml
+*.jar
