@@ -1,8 +1,9 @@
 .idea
 .bloop
 .metals
-**/project
-target
+**/project/
+target/
+out/
 *.class
 *.iml
 *.jar
