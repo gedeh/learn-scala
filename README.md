@@ -5,15 +5,19 @@ Attempt to learn Scala by creating a simple HTTP Web API
 ## Install
 
 - Install **Scoop** using PowerShell
+
 ```powershell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 ```
+
 - Install **Java**
-```
+
+```shell
 scoop bucket add java
 scoop install oraclejdk-lts
 ```
+
 - Install **Scala** using `scoop install scala`
 - Install **SBT** using `scoop install sbt`
 
