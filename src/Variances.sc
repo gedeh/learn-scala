@@ -2,7 +2,7 @@ object VariancesTest extends App {
     abstract class Animal {
         def name: String
         def species: String = "unknown"
-        override def toString(): String = name
+        override def toString: String = name
     }
 
     case class Cat(name: String, override val species: String = "cat") extends Animal
@@ -28,12 +28,12 @@ object VariancesTest extends App {
 
         class AnimalPrinter extends Printer[Animal] {
             def print(animal: Animal): Unit =
-                println(s"The ${animal.species}'s name: ${animal}")
+                println(s"The ${animal.species}'s name: $animal")
         }
 
         class CatPrinter extends Printer[Cat] {
             def print(cat: Cat): Unit =
-              println(s"The ${cat.species}'s name: ${cat}")
+              println(s"The ${cat.species}'s name: $cat")
         }
 
         val cat: Cat = Cat("Puss")
@@ -54,8 +54,8 @@ object VariancesTest extends App {
             def setValue(value: A): Unit = {
                 _value = value
                 value match {
-                    case animal: Animal => println(s"The ${animal.species}'s name: ${animal}")
-                    case other => println(s"The object's name: ${value}")
+                    case animal: Animal => println(s"The ${animal.species}'s name: $animal")
+                    case other => println(s"The object's name: $value")
                 }
             }
         }
